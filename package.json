@@ -1,5 +1,10 @@
 {
   "name": "blockchain-ts",
+  "author": {
+    "name": "ZaikoXander",
+    "url": "https://github.com/ZaikoXander",
+    "email": "alexdaniel.lima28@gmail.com"
+  },
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
