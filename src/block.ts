@@ -4,7 +4,7 @@ import { BlockData } from "."
 
 class Block {
   public index: number
-  public timestamp?: number
+  public timestamp: number
   public data?: BlockData
   public previousHash: string
   public hash: string
@@ -16,10 +16,11 @@ class Block {
     previousHash = ''
   ) {
     this.index = index
+    this.timestamp = Date.now()
     this.data = data
     this.previousHash = previousHash
-    this.hash = this.calculateHash()
     this.nonce = 0
+    this.hash = this.calculateHash()
   }
 
   public calculateHash(): string {
@@ -42,7 +43,7 @@ class Block {
     return targetHex
   }
 
-  public validateHash(hash: string, difficulty: number): boolean {
+  private validateHash(hash: string, difficulty: number): boolean {
     const target = this.calculateTarget(difficulty)
     const hashBigInt = BigInt(`0x${hash}`)
     const targetBigInt = BigInt(`0x${target}`)
@@ -52,9 +53,10 @@ class Block {
   public mineBlock(difficulty: number): void {
     while (!this.validateHash(this.hash, difficulty)) {
       this.nonce++
+      this.timestamp = Date.now()
       this.hash = this.calculateHash()
     }
-    this.timestamp = Date.now()
+
     console.log(`Block mined: ${this.hash}`)
   }
 }
