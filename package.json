@@ -5,10 +5,15 @@
     "url": "https://github.com/ZaikoXander",
     "email": "alexdaniel.lima28@gmail.com"
   },
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.0.0",
+  "main": "dist/src/index.js",
   "license": "MIT",
+  "engines": {
+    "node": ">=18.14.1"
+  },
   "scripts": {
+    "build": "tsc",
+    "prod": "node ./dist/src/index.js",
     "dev": "ts-node ./src/index",
     "test": "jest",
     "test:watch": "jest --watch",
