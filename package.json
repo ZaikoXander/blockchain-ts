@@ -10,7 +10,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "ts-node ./src/index",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage"
   },
   "devDependencies": {
     "@types/jest": "^29.5.1",
