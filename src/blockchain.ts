@@ -16,6 +16,10 @@ class Blockchain {
     return initialBlock
   }
 
+  public getChain(): Block[] {
+    return this.chain
+  }
+
   public getLatestBlock(): Block {
     return this.chain[this.chain.length - 1]
   }
