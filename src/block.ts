@@ -1,6 +1,6 @@
 import crypto from "node:crypto"
 
-import { BlockData } from "."
+import BlockData from "./blockData"
 
 class Block {
   public index: number

@@ -1,18 +1,7 @@
-import Blockchain from "./blockchain";
+import Blockchain from "./blockchain"
+import BlockData from "./blockData"
 
 const blockchain = new Blockchain()
-
-interface BlockDataConstructorParams {
-  amount: number
-}
-
-export class BlockData {
-  public amount: number
-
-  constructor({ amount }: BlockDataConstructorParams) {
-    this.amount = amount
-  }
-}
 
 const blockData1 = new BlockData({
   amount: 10

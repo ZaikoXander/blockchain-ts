@@ -1,5 +1,5 @@
-import { BlockData } from ".";
-import Block from "./block";
+import Block from "./block"
+import BlockData from "./blockData"
 
 class Blockchain {
   private difficulty: number
